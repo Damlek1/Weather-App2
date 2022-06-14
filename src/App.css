@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #e1d3d3;
+  position: relative;
+}
+.app:before{
+  content: '';
+  background: url('../src/assets/sky.jpg') center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.weather{
+  width: 33rem;
+  height: 28rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: space-around;
+}
+.weather_display{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 1rem;
+  height: 17rem;
+}
+.weather_location{
+  font-size: 2rem;
+  font-weight: 500;
+}
+.weather_degree{
+  font-size: 2rem;
+  font-weight: 500;
+}
+.weather_desc{
+  display: flex;
+  align-items: center;
+}
+.weather_desc_head{
+  display: flex;
+  align-items: center;
+}
+.weather_icon{
+  font-size: 2rem;
+  margin-right: 0.4rem;
+}
+.weather_desc * h3{
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-right: 1rem;
+  margin-bottom: 0.7rem;
+}
+.weather_date{
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgb(220, 211, 211);
+}
+.weather_country{
+  height: 100%;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-left: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1240px) {
+  .app{
+    overflow: hidden;
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+@media screen and (max-width: 560px) {
+  .weather{
+    width: 90%;
+    margin-top: 0px;
+
+  }
+  .weather_location{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .weather_degree{
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 }
