@@ -92,7 +92,7 @@ function App() {
           </div>
           <div className='weather_country'>
             <h3>{country}</h3>
-            <h2 className='weather_date'>{Date()}</h2>
+
           </div>
         </div>
       </div>
